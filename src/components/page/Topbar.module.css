@@ -1,0 +1,144 @@
+.topbar {
+    width: 100%;
+    height: var(--topbar-height);
+    max-height: var(--topbar-height);
+    background-color: var(--background-colour1);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: var(--topbar-height-inverse);
+    z-index: 1;
+}
+
+.custom-background {
+    background-color: transparent;
+}
+
+.language-container {
+    display: flex;
+    align-items: center;
+    color: var(--text-colour-inactive);
+    gap: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    flex: 1;
+    justify-content: center;
+}
+
+.language-container:hover {
+    color: var(--text-colour1);
+    cursor: pointer;
+}
+
+.language-text {
+}
+
+.language-image-container {
+    bottom: unset;
+}
+
+.language-image {
+}
+
+.bar-list-left {
+    list-style-type: none;
+    max-height: inherit;
+    height: inherit;
+    padding-left: 50px;
+    display: flex;
+    gap: 50px;
+    flex: 1;
+    justify-content: start;
+}
+
+.bar-list-right {
+    list-style-type: none;
+    line-height: var(--topbar-height);
+    max-height: inherit;
+    height: inherit;
+    display: flex;
+    padding-right: 50px;
+    gap: 30px;
+    flex: 1;
+    justify-content: end;
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    width: 100px;
+    right: 20px;
+    height: auto;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.expand {
+    padding: 15px;
+    z-index: 1;
+}
+
+.expand-container {
+    height: unset;
+    width: unset;
+}
+
+.mobile-list {
+    list-style-type: none;
+    line-height: var(--topbar-height);
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    margin-top: var(--topbar-height);
+    transition: 0.3s ease;
+}
+
+.mobile-list-container {
+    height: 0vh;
+    width: 100vw;
+    position: absolute;
+    background-color: var(--main-colour);
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.bar-expanded {
+    height: 100vh;
+}
+
+.bar-items-expanded {
+    visibility: visible;
+    height: 50px;
+}
+
+.my-name-container {
+    display: flex;
+    align-items: center;
+}
+
+.my-name {
+    color: var(--text-colour1);
+    width: fit-content;
+}
+
+.my-name span {
+    color: rgb(194, 194, 194);
+    margin: 6px;
+}
+
+.greeting {
+    color: var(--text-colour1);
+    margin-left: 10px;
+    transition: 1s;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(30px);
+}
+
+
+
+.my-name-container:hover > .greeting {
+    opacity: 1;
+    margin-left: 30px;
+}

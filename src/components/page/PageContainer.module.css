@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: "Open Sans";
+    font-weight: bold;
+
+    --topbar-height: 100px;
+    --topbar-height-inverse: -100px;
+
+    --senapp-colour: rgb(255 200 0);
+    --white-colour: white;
+    --black-colour: rgb(25 25 25);
+}
+
+.page-container {
+    min-height: calc(100vh - var(--topbar-height));
+    background-color: var(--background-colour1);
+}
+
+.custom-background {
+    background-color: transparent;
+}

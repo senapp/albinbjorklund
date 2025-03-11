@@ -1,0 +1,24 @@
+.bar-item {
+    display: inline-block;
+    max-height: inherit;
+    height: inherit;
+    white-space: nowrap;
+    align-content: center;
+    max-width: 200px;
+}
+
+.bar-item-content {
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: var(--text-colour-inactive);
+    font-size: 14px;
+}
+
+.active {
+    color: var(--text-colour1);
+}
+
+.bar-item-content:hover {
+    color: var(--text-colour1);
+    cursor: pointer;
+}

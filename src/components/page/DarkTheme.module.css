@@ -1,0 +1,12 @@
+* {
+    --background-colour1: rgb(25 25 25);
+    --background-colour2: rgb(45 45 45);
+
+    --gradient-background: linear-gradient(76deg, rgb(255 62 0), rgb(255 151 151));
+
+    --text-colour1: white;
+    --text-colour2: black;
+    --text-colour3: rgb(220 220 220);
+
+    --text-colour-inactive: rgb(148, 123, 123);
+}
