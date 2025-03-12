@@ -22,7 +22,7 @@ export const getRootPath = (type?: ConnectionType): string => {
             return 'http://127.0.0.1:5500';
         case ConnectionType.Public:
         default:
-            return 'www.albinbjoerklund.com';
+            return 'https://www.albinbjoerklund.com';
     }
 };
 
