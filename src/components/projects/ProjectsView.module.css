@@ -4,5 +4,29 @@
     justify-content: center;
     gap: 5px;
     margin-bottom: 50px;
-    width: 80%;
+    width: 90%;
+}
+
+.category-container-top {
+    width: 100%;
+    display: flex;
+    place-content: center;
+}
+
+.category-container {
+    display: flex;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px 0;
+    justify-content: center;
+}
+
+.category-title {
+    --container-size: 250px; /* Compare view Project.module.css */
+    color: var(--text-colour1);
+    font-style: italic;
+    transform: translate(calc(-1 * (var(--container-size) - 10px)), -10px);
+    width: 0px;
+    white-space: nowrap;
 }

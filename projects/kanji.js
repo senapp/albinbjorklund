@@ -180,7 +180,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-2ee02c","src_components_page_PageContainer_tsx","src_components_page_PageContent_tsx-src_framework_projects_ts","src_components_projects_ProjectView_tsx"], () => (__webpack_require__("./src/projects/kanji.tsx")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-8323c0","src_components_page_PageContainer_tsx","src_components_page_PageContent_tsx-src_framework_projects_ts","src_components_projects_ProjectView_tsx"], () => (__webpack_require__("./src/projects/kanji.tsx")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -40,6 +40,7 @@
         "webpack-merge": "^5.8.0"
     },
     "dependencies": {
+        "country-flag-emoji-polyfill": "^0.1.8",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     }

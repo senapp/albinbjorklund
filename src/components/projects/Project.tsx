@@ -10,7 +10,7 @@ type Props = {
 
 export const Project: React.FC<Props> = ({ project, showPrivate }) => (
     <div className={css.container}>
-        <Image href={(project.url + (showPrivate ? "?projects" : ""))} aClassName={css.imageA} containerClassName={css.imageContainer} imageClassName={css.image} imageIdentity={project.icon} />
+        <Image href={project.url} aClassName={css.imageA} containerClassName={css.imageContainer} imageClassName={css.image} imageIdentity={project.icon} />
         <div className={css.title}>{project.name}</div>
         <div className={css.links}>
             {project.links.map((link, index) => <>

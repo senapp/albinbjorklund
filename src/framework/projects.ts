@@ -29,6 +29,7 @@ export type ProjectInformation = {
     public: boolean;
     url: string;
     photos: string[];
+    tags: string[];
 }
 
 
@@ -55,7 +56,8 @@ Privacy Policy: https://senapp.github.io/pages/legal.html?0
 Terms and Conditions: https://senapp.github.io/pages/legal.html?1`,
     public: true,
     url: toUrl(`/projects/ifs`),
-    photos: []
+    photos: [],
+    tags: ['Game', 'Released', 'C#', 'Unity', 'Firebase']
 };
 
 const EFSProject: ProjectInformation = {
@@ -82,7 +84,8 @@ Privacy Policy: https://senapp.github.io/pages/legal.html?0
 Terms and Conditions: https://senapp.github.io/pages/legal.html?1`,
     public: true,
     url: toUrl(`/projects/efs`),
-    photos: []
+    photos: [],
+    tags: ['Game', 'Released', 'C#', 'Unity']
 };
 
 const ChessProject: ProjectInformation = {
@@ -96,7 +99,8 @@ const ChessProject: ProjectInformation = {
     description: `Chess made in python`,
     public: false,
     url: toUrl(`/projects/chess`),
-    photos: []
+    photos: [],
+    tags: ['Application', 'Coding Adventure', 'Python', 'PyGame']
 };
 
 const GameEngineProject: ProjectInformation = {
@@ -148,7 +152,8 @@ Extension methods for vectors, math, & randomizing
 Example programs`,
     public: false,
     url: toUrl(`/projects/senappGameEngine`),
-    photos: []
+    photos: [],
+    tags: ['Application', 'Coding Adventure', 'C#', 'OpenGL', 'OpenTK']
 };
 
 const PathfindingProject: ProjectInformation = {
@@ -165,7 +170,8 @@ const PathfindingProject: ProjectInformation = {
 Started as a pure Javascript project but was later converted to Typescript and React`,
     public: false,
     url: toUrl(`/projects/pathfinding`),
-    photos: []
+    photos: [],
+    tags: ['Application', 'Coding Adventure', 'Typescript', 'React']
 };
 
 const SkeadealsProject: ProjectInformation = {
@@ -183,7 +189,8 @@ All discounts were one-time discounts and come up with a confirmation screen whe
 The app was active between 1 January 2020 and 1 July 2020 and coupons came and went constantly during that period.`,
     public: false,
     url: toUrl(`/projects/skeadeals`),
-    photos: []
+    photos: [],
+    tags: ['App', 'Unity', 'C#', 'Firebase', 'Business']
 };
 
 const BBGrandenProject: ProjectInformation = {
@@ -197,7 +204,8 @@ const BBGrandenProject: ProjectInformation = {
     description: `Booking site for a hotel in Skellefteå, Sweden`,
     public: false,
     url: toUrl(`/projects/bbgranden`),
-    photos: []
+    photos: [],
+    tags: ['Website', 'HTML CSS', 'Javascript', 'Sirvoy', 'Freelance Work']
 };
 
 const KanjiAppProject: ProjectInformation = {
@@ -212,7 +220,8 @@ const KanjiAppProject: ProjectInformation = {
     description: `Kanji practicing application for learning Japanese.`,
     public: false,
     url: toUrl(`/projects/kanji`),
-    photos: []
+    photos: [],
+    tags: ['Application', 'Coding Adventure', 'Typescript', 'React']
 };
 
 const JapanWorldMarkerProject: ProjectInformation = {
@@ -227,7 +236,8 @@ const JapanWorldMarkerProject: ProjectInformation = {
     description: `Marker application for recording which locations around Japan and in the world you have been to or wish to go to.`,
     public: false,
     url: toUrl(`/projects/japanworldmarker`),
-    photos: []
+    photos: [],
+    tags: ['Application', 'Coding Adventure', 'Typescript', 'React', 'OpenStreetMap']
 };
 
 export const ProjectStore = new Map<ProjectIdentity, ProjectInformation>([
