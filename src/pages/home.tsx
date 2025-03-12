@@ -21,7 +21,7 @@ export const HomePage: React.FC = () => {
             <div className={!mobileView ? css.introductionContainer : css.mobileIntroduction}>
                 <div>
                     <span>{GetTranslation(TranslationIdentity.Introduction1)}</span>
-                    <a href={"//" + toUrl(`/pages/resume`)} className={css.introductionName}>{GetTranslation(TranslationIdentity.Name)}</a>
+                    <a href={toUrl(`/pages/resume`)} className={css.introductionName}>{GetTranslation(TranslationIdentity.Name)}</a>
                     <span>{GetTranslation(TranslationIdentity.Introduction2)}</span>
                 </div>
                 <div>
@@ -32,7 +32,7 @@ export const HomePage: React.FC = () => {
                 </div>
                 <div>
                     <span>{GetTranslation(TranslationIdentity.Introduction5)}</span>
-                    <a href={"//" + toUrl(`/pages/projects`)} className={css.introductionLink}>{GetTranslation(TranslationIdentity.Projects)}</a>
+                    <a href={toUrl(`/pages/projects`)} className={css.introductionLink}>{GetTranslation(TranslationIdentity.Projects)}</a>
                     <span>{GetTranslation(TranslationIdentity.Introduction6)}</span>
                 </div>
             </div>

@@ -35,7 +35,7 @@ export const BarItem: React.FC<Props> = ({ label = '', imageIdentity, url, actio
 
     return (
         <li className={itemClasses}>
-            <a className={aClasses} onClick={action} href={"//" + url} target={newPage ? '_blank' : undefined} rel="noreferrer">
+            <a className={aClasses} onClick={action} href={url} target={newPage ? '_blank' : undefined} rel="noreferrer">
                 {label && label}
                 {imageIdentity && <Image imageIdentity={imageIdentity} />}
             </a>
