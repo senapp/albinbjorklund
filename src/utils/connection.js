@@ -26,7 +26,7 @@ const getRootPath = (type) => {
             return 'http://127.0.0.1:5500';
         case ConnectionType.Public:
         default:
-            return 'https://senapp.github.io';
+            return 'https://senapp.github.io/albinbjorklund';
     }
 };
 exports.getRootPath = getRootPath;

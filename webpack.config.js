@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pages = [
     { url: '404' },
+    { url: 'index' },
     { url: 'pages/projects' },
     { url: 'pages/contact' },
     { url: 'pages/home' },
@@ -81,7 +82,7 @@ const commonConfig = (env) => ({
         pages.map(
           (page) =>
             new HtmlWebpackPlugin({
-                template: `./webpack-template.html`,
+                template: page.url === 'index' ? `./webpack-template-index.html` : `./webpack-template.html`,
                 filename: `${page.url}.html`,
                 chunks: [page.url],
                 favicon: './resources/favicon.ico'

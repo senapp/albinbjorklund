@@ -5,6 +5,7 @@ const React = require("react");
 const Topbar_1 = require("./Topbar");
 const PageContainer_module_css_1 = require("./PageContainer.module.css");
 const theme_1 = require("../../framework/theme");
+const country_flag_emoji_polyfill_1 = require("country-flag-emoji-polyfill");
 const PageContainer = ({ className = "", customBackground = true, children }) => {
     if ((0, theme_1.getTheme)() === theme_1.Theme.Light) {
         require('./LightTheme.module.css');
@@ -13,6 +14,7 @@ const PageContainer = ({ className = "", customBackground = true, children }) =>
         require('./DarkTheme.module.css');
     }
     require('./PageContainer.module.css');
+    (0, country_flag_emoji_polyfill_1.polyfillCountryFlagEmojis)();
     return (React.createElement("div", null,
         React.createElement(Topbar_1.Topbar, { customBackground: customBackground }),
         React.createElement("div", { className: PageContainer_module_css_1.default.pageContainer + " " + className + " " + (customBackground ? PageContainer_module_css_1.default.customBackground : "") }, children)));

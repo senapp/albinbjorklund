@@ -23,7 +23,7 @@ const ProjectView = ({ project }) => {
         if (element) {
             element.innerHTML = createLinksInText(project.description);
         }
-    });
+    }, []);
     const [galleryLimit, setGalleryLimit] = (0, react_1.useState)(5);
     return (React.createElement("div", { className: ProjectView_module_css_1.default.projectContainer },
         React.createElement("div", { className: mobileView ? ProjectView_module_css_1.default.projectMainMobile : ProjectView_module_css_1.default.projectMain },

@@ -20,7 +20,7 @@ const Topbar = ({ customBackground = false }) => {
     const getBarItems = () => {
         return (React.createElement(React.Fragment, null,
             React.createElement("ul", { className: !mobileView ? Topbar_module_css_1.default.barListLeft : (Topbar_module_css_1.default.mobileList + " " + Topbar_module_css_1.default.barItemsExpanded) },
-                React.createElement("div", { className: Topbar_module_css_1.default.myNameContainer },
+                React.createElement("div", { className: Topbar_module_css_1.default.myNameContainer + " " + (mobileView ? Topbar_module_css_1.default.nameMobile : "") },
                     isEnglish
                         ? React.createElement("div", { className: Topbar_module_css_1.default.myName },
                             React.createElement("span", null, "Carl"),
@@ -30,13 +30,12 @@ const Topbar = ({ customBackground = false }) => {
                             React.createElement("span", null, "\u30AB\u30FC\u30EB"),
                             "\u30A2\u30EB\u30D3\u30F3"),
                     React.createElement("div", { className: Topbar_module_css_1.default.greeting }, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Greeting)))),
-            React.createElement("div", { className: Topbar_module_css_1.default.languageContainer, onClick: () => (0, translation_1.switchLanguage)() },
+            React.createElement("div", { className: !mobileView ? Topbar_module_css_1.default.languageContainer : (Topbar_module_css_1.default.mobileList + " " + Topbar_module_css_1.default.barItemsExpanded + " " + Topbar_module_css_1.default.languageMobileList), onClick: () => (0, translation_1.switchLanguage)() },
                 React.createElement(Image_1.Image, { containerClassName: Topbar_module_css_1.default.languageImageContainer, imageClassName: Topbar_module_css_1.default.languageImage, imageIdentity: images_1.ImageIdentity.Translation }),
                 React.createElement("div", { className: Topbar_module_css_1.default.languageText }, isEnglish ? "> 日本語" : "> English")),
             React.createElement("ul", { className: !mobileView ? Topbar_module_css_1.default.barListRight : (Topbar_module_css_1.default.mobileList + " " + Topbar_module_css_1.default.barItemsExpanded) },
                 React.createElement(BarItem_1.BarItem, { label: (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Home), url: (0, connection_1.toUrl)(`/pages/home`) }),
                 React.createElement(BarItem_1.BarItem, { label: (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Projects), url: (0, connection_1.toUrl)(`/pages/projects`) }),
-                React.createElement(BarItem_1.BarItem, { label: (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Resume), url: (0, connection_1.toUrl)(`/pages/resume`) }),
                 React.createElement(BarItem_1.BarItem, { label: (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Contact), url: (0, connection_1.toUrl)(`/pages/contact`) }))));
     };
     const createTopLeftView = () => {

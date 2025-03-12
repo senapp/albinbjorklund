@@ -5,7 +5,7 @@ const React = require("react");
 const images_1 = require("../../framework/images");
 const css_1 = require("../../utils/css");
 const Image_module_css_1 = require("./Image.module.css");
-const Image = ({ imageIdentity, containerClassName = '', imageClassName = '', aClassName = '', onClick = undefined, href }) => {
+const Image = ({ imageIdentity, containerClassName = '', imageClassName = '', aClassName = '', onClick = undefined, href, target }) => {
     const imageInfo = images_1.ImageStore.get(imageIdentity);
     if (!imageInfo) {
         return null;
@@ -25,7 +25,7 @@ const Image = ({ imageIdentity, containerClassName = '', imageClassName = '', aC
         ? React.createElement("i", { className: imageClasses })
         : React.createElement("img", { className: imageClasses, src: imageInfo.url }));
     return (React.createElement("div", { onClick: onClick, className: containerClasses }, href
-        ? React.createElement("a", { className: aClassName, href: href }, getImage())
+        ? React.createElement("a", { className: aClassName, target: target, href: href }, getImage())
         : getImage()));
 };
 exports.Image = Image;
