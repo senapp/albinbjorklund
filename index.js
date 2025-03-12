@@ -30,13 +30,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/404.tsx":
-/*!*********************!*\
-  !*** ./src/404.tsx ***!
-  \*********************/
+/***/ "./src/index.tsx":
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.NotFound = void 0;\r\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nconst ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\r\nconst PageContainer_1 = __webpack_require__(/*! ./components/page/PageContainer */ \"./src/components/page/PageContainer.tsx\");\r\nconst _404_module_css_1 = __webpack_require__(/*! ./404.module.css */ \"./src/404.module.css\");\r\nconst NotFound = () => (React.createElement(PageContainer_1.PageContainer, null,\r\n    React.createElement(\"div\", { className: _404_module_css_1.default.base }, \"404 - Page not found\")));\r\nexports.NotFound = NotFound;\r\nReactDOM.render(React.createElement(exports.NotFound, null), document.getElementById('root'));\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvNDA0LnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7QUFBQSxnRkFBK0I7QUFDL0IsMkZBQXNDO0FBQ3RDLDhIQUFnRTtBQUNoRSw4RkFBbUM7QUFFNUIsTUFBTSxRQUFRLEdBQWEsR0FBRyxFQUFFLENBQUMsQ0FDcEMsb0JBQUMsNkJBQWE7SUFDViw2QkFBSyxTQUFTLEVBQUUseUJBQUcsQ0FBQyxJQUFJLDJCQUVsQixDQUNNLENBQ25CLENBQUM7QUFOVyxnQkFBUSxZQU1uQjtBQUVGLFFBQVEsQ0FBQyxNQUFNLENBQUMsb0JBQUMsZ0JBQVEsT0FBRyxFQUFFLFFBQVEsQ0FBQyxjQUFjLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2FsYmluYmpvcmtsdW5kLy4vc3JjLzQwNC50c3g/ZWM3NiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCAqIGFzIFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbSc7XHJcbmltcG9ydCB7IFBhZ2VDb250YWluZXIgfSBmcm9tICcuL2NvbXBvbmVudHMvcGFnZS9QYWdlQ29udGFpbmVyJztcclxuaW1wb3J0IGNzcyBmcm9tICcuLzQwNC5tb2R1bGUuY3NzJztcclxuXHJcbmV4cG9ydCBjb25zdCBOb3RGb3VuZDogUmVhY3QuRkMgPSAoKSA9PiAoXHJcbiAgICA8UGFnZUNvbnRhaW5lcj5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzLmJhc2V9PlxyXG4gICAgICAgICAgICA0MDQgLSBQYWdlIG5vdCBmb3VuZFxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgPC9QYWdlQ29udGFpbmVyPlxyXG4pO1xyXG5cclxuUmVhY3RET00ucmVuZGVyKDxOb3RGb3VuZCAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSk7Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/404.tsx\n");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.IndexPage = void 0;\r\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nconst ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\r\nconst PageContainer_1 = __webpack_require__(/*! ./components/page/PageContainer */ \"./src/components/page/PageContainer.tsx\");\r\nconst _404_module_css_1 = __webpack_require__(/*! ./404.module.css */ \"./src/404.module.css\");\r\nconst IndexPage = () => {\r\n    return (React.createElement(PageContainer_1.PageContainer, null,\r\n        React.createElement(\"div\", { className: _404_module_css_1.default.base })));\r\n};\r\nexports.IndexPage = IndexPage;\r\nReactDOM.render(React.createElement(exports.IndexPage, null), document.getElementById('root'));\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXgudHN4LmpzIiwibWFwcGluZ3MiOiI7OztBQUFBLGdGQUErQjtBQUMvQiwyRkFBc0M7QUFDdEMsOEhBQWdFO0FBQ2hFLDhGQUFtQztBQUU1QixNQUFNLFNBQVMsR0FBYSxHQUFHLEVBQUU7SUFDcEMsT0FBTyxDQUFDLG9CQUFDLDZCQUFhO1FBQ2xCLDZCQUFLLFNBQVMsRUFBRSx5QkFBRyxDQUFDLElBQUksR0FDbEIsQ0FDTSxDQUFDLENBQUM7QUFDdEIsQ0FBQztBQUxZLGlCQUFTLGFBS3JCO0FBRUQsUUFBUSxDQUFDLE1BQU0sQ0FBQyxvQkFBQyxpQkFBUyxPQUFHLEVBQUUsUUFBUSxDQUFDLGNBQWMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYWxiaW5iam9ya2x1bmQvLi9zcmMvaW5kZXgudHN4P2Q5ODYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgKiBhcyBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20nO1xyXG5pbXBvcnQgeyBQYWdlQ29udGFpbmVyIH0gZnJvbSAnLi9jb21wb25lbnRzL3BhZ2UvUGFnZUNvbnRhaW5lcic7XHJcbmltcG9ydCBjc3MgZnJvbSAnLi80MDQubW9kdWxlLmNzcyc7XHJcblxyXG5leHBvcnQgY29uc3QgSW5kZXhQYWdlOiBSZWFjdC5GQyA9ICgpID0+IHtcclxuICAgIHJldHVybiAoPFBhZ2VDb250YWluZXI+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e2Nzcy5iYXNlfT5cclxuICAgICAgICA8L2Rpdj5cclxuICAgIDwvUGFnZUNvbnRhaW5lcj4pO1xyXG59XHJcblxyXG5SZWFjdERPTS5yZW5kZXIoPEluZGV4UGFnZSAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSk7Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.tsx\n");
 
 /***/ })
 
@@ -150,7 +150,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"404": 0
+/******/ 			"index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -200,7 +200,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-8323c0","src_components_page_PageContainer_tsx"], () => (__webpack_require__("./src/404.tsx")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-8323c0","src_components_page_PageContainer_tsx"], () => (__webpack_require__("./src/index.tsx")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
