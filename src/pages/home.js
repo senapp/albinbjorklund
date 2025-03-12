@@ -21,7 +21,7 @@ const HomePage = () => {
             React.createElement("div", { className: !mobileView ? home_module_css_1.default.introductionContainer : home_module_css_1.default.mobileIntroduction },
                 React.createElement("div", null,
                     React.createElement("span", null, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Introduction1)),
-                    React.createElement("a", { href: (0, connection_1.toUrl)(`/pages/resume`), className: home_module_css_1.default.introductionName }, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Name)),
+                    React.createElement("a", { href: "//" + (0, connection_1.toUrl)(`/pages/resume`), className: home_module_css_1.default.introductionName }, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Name)),
                     React.createElement("span", null, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Introduction2))),
                 React.createElement("div", null,
                     React.createElement("span", null, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Introduction3))),
@@ -29,7 +29,7 @@ const HomePage = () => {
                     React.createElement("span", null, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Introduction4))),
                 React.createElement("div", null,
                     React.createElement("span", null, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Introduction5)),
-                    React.createElement("a", { href: (0, connection_1.toUrl)(`/pages/projects`), className: home_module_css_1.default.introductionLink }, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Projects)),
+                    React.createElement("a", { href: "//" + (0, connection_1.toUrl)(`/pages/projects`), className: home_module_css_1.default.introductionLink }, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Projects)),
                     React.createElement("span", null, (0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Introduction6)))))));
 };
 exports.HomePage = HomePage;
