@@ -3,6 +3,7 @@ import { Topbar } from './Topbar';
 
 import css from './PageContainer.module.css';
 import { getTheme, Theme } from '../../framework/theme';
+import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
 
 type Props = {
     className?: string;
@@ -17,6 +18,7 @@ export const PageContainer: React.FC<Props> = ({ className = "", customBackgroun
     }
 
     require('./PageContainer.module.css');
+    polyfillCountryFlagEmojis();
 
     return (
         <div>

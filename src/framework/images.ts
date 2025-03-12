@@ -3,8 +3,6 @@ export enum ImageIdentity {
     Instagram,
     Youtube,
     Twitter,
-    Reddit,
-    Discord,
     SenappStudios,
     Moon,
     Sun,
@@ -19,7 +17,12 @@ export enum ImageIdentity {
     Expand,
     Close,
     Kanji,
-    JapanWorldMarker
+    JapanWorldMarker,
+
+    Date,
+    Location,
+    Mail,
+    LinkedIn
 }
 
 export type ImageInformation = {
@@ -31,8 +34,7 @@ export const ImageStore = new Map<ImageIdentity, ImageInformation>([
     [ImageIdentity.Instagram, { url: 'fab fa-instagram', fontawesome: true }],
     [ImageIdentity.Youtube, { url: 'fab fa-youtube', fontawesome: true }],
     [ImageIdentity.Twitter, { url: 'fab fa-twitter', fontawesome: true }],
-    [ImageIdentity.Reddit, { url: 'fab fa-reddit', fontawesome: true }],
-    [ImageIdentity.Discord, { url: 'fab fa-discord', fontawesome: true }],
+    [ImageIdentity.LinkedIn, { url: 'fab fa-linkedin', fontawesome: true }],
     [ImageIdentity.SenappStudios, { url: '../resources/logo.png' }],
     [ImageIdentity.Moon, { url: 'fas fa-moon', fontawesome: true }],
     [ImageIdentity.Sun, { url: 'fas fa-sun', fontawesome: true }],
@@ -44,8 +46,11 @@ export const ImageStore = new Map<ImageIdentity, ImageInformation>([
     [ImageIdentity.Skeadeals, { url: '../resources/projects/skeadeals.png' }],
     [ImageIdentity.BBGranden, { url: '../resources/projects/bbgranden.png' }],
     [ImageIdentity.Translation, { url: 'fas fa-language', fontawesome: true }],
-    [ImageIdentity.Expand, { url: '../resources/icons/menuBar.png' }],
-    [ImageIdentity.Close, { url: '../resources/icons/close.png' }],
+    [ImageIdentity.Expand, { url: 'fas fa-bars', fontawesome: true }],
+    [ImageIdentity.Close, { url: 'fas fa-minus', fontawesome: true }],
     [ImageIdentity.Kanji, { url: '../resources/projects/kanji.png' }],
     [ImageIdentity.JapanWorldMarker, { url: '../resources/projects/japanworldmarker.png' }],
+    [ImageIdentity.Date, { url: 'fas fa-calendar-alt', fontawesome: true }],
+    [ImageIdentity.Location, { url: 'fas fa-map-pin', fontawesome: true }],
+    [ImageIdentity.Mail, { url: 'fas fa-envelope', fontawesome: true }],
 ]);

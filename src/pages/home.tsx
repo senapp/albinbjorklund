@@ -5,15 +5,20 @@ import { PageContent } from '../components/page/PageContent';
 import css from './home.module.css';
 import { GetTranslation, TranslationIdentity } from '../framework/translation';
 import { toUrl } from '../utils/connection';
+import { isPortrait, isMobile } from '../framework/settings';
 
 export const HomePage: React.FC = () => {
+    const mobileView = isPortrait() || isMobile();
+    const [, forceUpdate] = React.useReducer(x => x + 1, 0);
+    React.useEffect(() => { window.addEventListener('resize', forceUpdate); }, []);
+
     return (<PageContainer>
-        <PageContent className={css.homeContainer}>
-            <div className={css.pictureContainer}>
+        <PageContent className={css.homeContainer + " " + (mobileView ? css.mobileHomeContainer : "")}>
+            <div className={!mobileView ? css.pictureContainer : css.mobilePicture}>
                 <div className={css.backgroundShape}></div>
-                <img src="/resources/portfolio/full_body_cropped.png" className={css.picture} />
+                <img src="/resources/portfolio/full_body_cropped.png" className={css.picture + " " + (mobileView ? css.pictureWidthMobile : "")} />
             </div>
-            <div className={css.introductionContainer}>
+            <div className={!mobileView ? css.introductionContainer : css.mobileIntroduction}>
                 <div>
                     <span>{GetTranslation(TranslationIdentity.Introduction1)}</span>
                     <a href={toUrl(`/pages/resume`)} className={css.introductionName}>{GetTranslation(TranslationIdentity.Name)}</a>

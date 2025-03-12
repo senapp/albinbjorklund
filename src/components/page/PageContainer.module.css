@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-    font-family: "Open Sans";
+    font-family: "Twemoji Country Flags", "Open Sans";
     font-weight: bold;
 
     --topbar-height: 100px;
