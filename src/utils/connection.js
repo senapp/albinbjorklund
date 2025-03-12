@@ -26,7 +26,7 @@ const getRootPath = (type) => {
             return 'http://127.0.0.1:5500';
         case ConnectionType.Public:
         default:
-            return 'https://senapp.github.io/albinbjorklund';
+            return 'www.albinbjoerklund.com';
     }
 };
 exports.getRootPath = getRootPath;
@@ -42,6 +42,14 @@ const toUrl = (path, parameters = '') => {
     }
 };
 exports.toUrl = toUrl;
-const isCurrentUrl = (url) => url === document.location.href;
+const alternativeUrl = "senapp.github.io/albinbjorklund";
+const isCurrentUrl = (url) => {
+    if (!url) {
+        return false;
+    }
+    const current = document.location.href.toLowerCase();
+    const target = url.toLowerCase();
+    return current.includes(target) || current.includes(alternativeUrl);
+};
 exports.isCurrentUrl = isCurrentUrl;
 //# sourceMappingURL=connection.js.map

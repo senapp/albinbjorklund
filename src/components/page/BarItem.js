@@ -21,7 +21,7 @@ const BarItem = ({ label = '', imageIdentity, url, action, containerClassName = 
         [className]: !!className
     });
     return (React.createElement("li", { className: itemClasses },
-        React.createElement("a", { className: aClasses, onClick: action, href: url, target: newPage ? '_blank' : undefined, rel: "noreferrer" },
+        React.createElement("a", { className: aClasses, onClick: action, href: "//" + url, target: newPage ? '_blank' : undefined, rel: "noreferrer" },
             label && label,
             imageIdentity && React.createElement(Image_1.Image, { imageIdentity: imageIdentity }))));
 };
