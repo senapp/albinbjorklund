@@ -18,6 +18,7 @@ type Props = {
 
 export const BarItem: React.FC<Props> = ({ label = '', imageIdentity, url, action, containerClassName = '', className = '', newPage = false }) => {
     let isActive = isCurrentUrl(url);
+    
     if (document.location.href.toLowerCase().includes('project') && label.toLowerCase().includes('project')) {
         isActive = true;
     }

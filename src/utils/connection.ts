@@ -39,4 +39,15 @@ export const toUrl = (path: string, parameters = ''): string => {
     }
 };
 
-export const isCurrentUrl = (url: string | undefined): boolean => url === document.location.href;
+const alternativeUrl = "senapp.github.io/albinbjorklund";
+
+export const isCurrentUrl = (url: string | undefined): boolean => {
+    if (!url) {
+        return false;
+    }
+
+    const current = document.location.href.toLowerCase();
+    const target = url.toLowerCase();
+
+    return current.includes(target) || current.includes(alternativeUrl);
+};
