@@ -21,7 +21,7 @@ export const HomePage: React.FC = () => {
             <div className={!mobileView ? css.introductionContainer : css.mobileIntroduction}>
                 <div>
                     <span>{GetTranslation(TranslationIdentity.Introduction1)}</span>
-                    <a href={toUrl(`/pages/resume`)} className={css.introductionName}>{GetTranslation(TranslationIdentity.Name)}</a>
+                    <a href={toUrl(`/pages/contact`)} className={css.introductionName}>{GetTranslation(TranslationIdentity.Name)}</a>
                     <span>{GetTranslation(TranslationIdentity.Introduction2)}</span>
                 </div>
                 <div>
