@@ -34,16 +34,16 @@ export const ContactPage: React.FC = () => {
         } else if (lastName.length <= 0) {
             alert(GetTranslation(TranslationIdentity.LastNameError));
             return false;
-        } else if (organization.length <= 3) {
+        } else if (organization.length < 3) {
             alert(GetTranslation(TranslationIdentity.OrganizationError));
             return false;
         } else if (email.length <= 4 || !email.includes('@') || !email.includes('.')) {
             alert(GetTranslation(TranslationIdentity.EmailError));
             return false;
-        } else if (subject.length <= 3) {
+        } else if (subject.length < 3) {
             alert(GetTranslation(TranslationIdentity.SubjectError));
             return false;
-        } else if (message.length <= 10) {
+        } else if (message.length < 10) {
             alert(GetTranslation(TranslationIdentity.MessageError));
             return false;
         }
