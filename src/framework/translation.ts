@@ -27,7 +27,7 @@ export enum TranslationIdentity {
     Projects,
     Resume,
     Contact,
-    Name,
+    Albin,
     Introduction1,
     Introduction2,
     Introduction3,
@@ -55,6 +55,16 @@ export enum TranslationIdentity {
     Websites,
     Business,
     Applications,
+
+    Name,
+    Links,
+    Tools,
+    Description,
+    Gallery,
+    GalleryPhotosText,
+
+    Website,
+    Award,
 }
 
 export type TranslationInformation = {
@@ -68,7 +78,7 @@ export const TranslationStore = new Map<TranslationIdentity, TranslationInformat
     [TranslationIdentity.Projects, { english: 'Projects', japanese: 'プロジェクト' }],
     [TranslationIdentity.Resume, { english: 'Resume', japanese: '履歴書' }],
     [TranslationIdentity.Contact, { english: 'Contact', japanese: '連絡先' }],
-    [TranslationIdentity.Name, { english: 'Albin', japanese: 'アルビン' }],
+    [TranslationIdentity.Albin, { english: 'Albin', japanese: 'アルビン' }],
     [TranslationIdentity.Introduction1, { english: 'Hello, I\'m', japanese: 'こんにちは、スウェーデン出身の' }],
     [TranslationIdentity.Introduction2, { english: 'from Sweden,', japanese: 'です。' }],
     [TranslationIdentity.Introduction3, { english: 'a Software Designer and Game Developer (and sometimes a model).', japanese: 'ソフトウェアデザイナー兼ゲーム開発者です（モデルも時々やります）。' }],
@@ -96,7 +106,35 @@ export const TranslationStore = new Map<TranslationIdentity, TranslationInformat
     [TranslationIdentity.Websites, { english: 'Websites', japanese: 'ウェブサイト' }],
     [TranslationIdentity.Business, { english: 'Business', japanese: 'ビジネス' }],
     [TranslationIdentity.Applications, { english: 'Applications', japanese: 'アプリケーション' }],
+
+    [TranslationIdentity.Name, { english: 'Name', japanese: '名前' }],
+    [TranslationIdentity.Links, { english: 'Links', japanese: 'リンク' }],
+    [TranslationIdentity.Tools, { english: 'Tools', japanese: 'ツール' }],
+    [TranslationIdentity.Description, { english: 'Description', japanese: '説明' }],
+    [TranslationIdentity.Gallery, { english: 'Gallery', japanese: 'ギャラリー' }],
+    [TranslationIdentity.GalleryPhotosText, { english: '`Showing {0} of {1} photos`', japanese: '{1}枚中{0}枚を表示中' }],
+
+    [TranslationIdentity.Website, { english: 'Website', japanese: 'ウェブサイト' }],
+    [TranslationIdentity.Award, { english: 'Award', japanese: 'アワード' }],
 ]);
+
+export const LinkTranslation = (link: string): string => {
+    let identitiesToCheck = [
+        TranslationIdentity.Website,
+        TranslationIdentity.Award
+    ]
+
+    let linkLower = link.toLowerCase().trim();
+    for (let index = 0; index < identitiesToCheck.length; index++) {
+        const identity = identitiesToCheck[index];
+        let identityLower = TranslationStore.get(identity)?.english.toLowerCase().trim();
+        if (linkLower == identityLower) {
+            return GetTranslation(identity);
+        }
+    }
+
+    return link;
+}
 
 export const GetTranslation = (identity: TranslationIdentity): string => {
     const language = getLanguage();

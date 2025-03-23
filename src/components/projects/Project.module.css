@@ -31,6 +31,7 @@
     text-align: center;
     font-weight: bold;
     color: var(--text-colour1);
+    word-break: keep-all;
 }
 
 .links {
@@ -40,6 +41,7 @@
 .link {
     text-decoration: none;
     transition: 0.3s ease;
+    font-size: 14px;
 }
 
 .link-seperator {
