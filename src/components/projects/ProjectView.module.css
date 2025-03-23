@@ -1,3 +1,8 @@
+* {
+    --sub-text-colour: rgb(200 200 200);
+}
+
+
 .project-container {
     display: flex;
     flex-direction: column;
@@ -67,11 +72,16 @@
     font-size: 30px;
     margin-top: -5px;
     color: var(--text-colour1);
+    word-break: keep-all;
 }
 
 .project-info h2 {
     font-size: 25px;
-    color: var(--text-colour1);
+    font-style: italic;
+    color: var(--sub-text-colour);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
 }
 
 .project-info p {
@@ -116,7 +126,10 @@
 
 .project-info-right h3 {
     font-style: italic;
-    color: rgb(100, 100, 100);
+    color: var(--sub-text-colour);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
 }
 
 .project-links-container {
@@ -153,7 +166,6 @@
 .project-info-mobile p {
     font-size: 16px;
     word-wrap: break-word;
-    line-height: 30px;
     font-weight: 400;
     white-space: pre-wrap;
     color: var(--text-colour1);
@@ -203,7 +215,33 @@
     align-self: center;
 }
 
+.gallery-top-bar h2 {
+    font-size: 25px;
+    font-style: italic;
+    color: var(--sub-text-colour);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
+}
+
 .gallery-photos-text {
     font-size: 12px;
     margin-top: 20px;
+    color: var(--sub-text-colour);
+}
+
+.description {
+    font-size: 22px;
+    word-wrap: break-word;
+    line-height: 30px;
+    font-weight: 400;
+    white-space: pre-wrap;
+    color: var(--text-colour1);
+}
+
+.description-mobile {
+    word-wrap: break-word;
+    font-weight: 400;
+    white-space: pre-wrap;
+    color: var(--text-colour1);
 }

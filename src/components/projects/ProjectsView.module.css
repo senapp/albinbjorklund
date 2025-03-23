@@ -26,7 +26,10 @@
     --container-size: 250px; /* Compare view Project.module.css */
     color: var(--text-colour1);
     font-style: italic;
-    transform: translate(calc(-1 * (var(--container-size) - 10px)), -10px);
+    transform: translate(calc(-1 * (var(--container-size) - 10px)), -14px);
     width: 0px;
     white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
 }

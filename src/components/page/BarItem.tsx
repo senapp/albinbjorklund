@@ -5,6 +5,7 @@ import { filterCssClasses } from '../../utils/css';
 import { Image } from '../common/Image';
 
 import css from './BarItem.module.css';
+import { GetTranslation, TranslationIdentity } from '../../framework/translation';
 
 type Props = {
     label?: string;
@@ -18,7 +19,7 @@ type Props = {
 
 export const BarItem: React.FC<Props> = ({ label = '', imageIdentity, url, action, containerClassName = '', className = '', newPage = false }) => {
     let isActive = isCurrentUrl(url);
-    if (document.location.href.toLowerCase().includes('project') && label.toLowerCase().includes('project')) {
+    if (document.location.href.toLowerCase().includes('project') && label.toLowerCase().includes(GetTranslation(TranslationIdentity.Projects).toLowerCase())) {
         isActive = true;
     }
 
