@@ -22,7 +22,16 @@ export enum ImageIdentity {
     Date,
     Location,
     Mail,
-    LinkedIn
+    LinkedIn,
+
+    Sorting,
+    Timetable,
+    VoyageNest,
+    TEDx,
+    Senapp,
+    ThisWebsite,
+
+    APUPhotoshoot,
 }
 
 export type ImageInformation = {
@@ -53,4 +62,12 @@ export const ImageStore = new Map<ImageIdentity, ImageInformation>([
     [ImageIdentity.Date, { url: 'fas fa-calendar-alt', fontawesome: true }],
     [ImageIdentity.Location, { url: 'fas fa-map-pin', fontawesome: true }],
     [ImageIdentity.Mail, { url: 'fas fa-envelope', fontawesome: true }],
+
+    [ImageIdentity.Sorting, { url: '../resources/projects/sorting.png' }],
+    [ImageIdentity.Timetable, { url: '../resources/projects/timetable.png' }],
+    [ImageIdentity.VoyageNest, { url: '../resources/projects/voyagenest.png' }],
+    [ImageIdentity.TEDx, { url: '../resources/projects/tedx.jpg' }],
+    [ImageIdentity.Senapp, { url: '../resources/projects/senapp.png' }],
+    [ImageIdentity.ThisWebsite, { url: '../resources/projects/thiswebsite.jpg' }],
+    [ImageIdentity.APUPhotoshoot, { url: '../resources/projects/apuphotoshoot.png' }],
 ]);

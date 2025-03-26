@@ -35,7 +35,7 @@ const ContactPage = () => {
             alert((0, translation_1.GetTranslation)(translation_1.TranslationIdentity.LastNameError));
             return false;
         }
-        else if (organization.length <= 3) {
+        else if (organization.length < 3) {
             alert((0, translation_1.GetTranslation)(translation_1.TranslationIdentity.OrganizationError));
             return false;
         }
@@ -43,11 +43,11 @@ const ContactPage = () => {
             alert((0, translation_1.GetTranslation)(translation_1.TranslationIdentity.EmailError));
             return false;
         }
-        else if (subject.length <= 3) {
+        else if (subject.length < 3) {
             alert((0, translation_1.GetTranslation)(translation_1.TranslationIdentity.SubjectError));
             return false;
         }
-        else if (message.length <= 10) {
+        else if (message.length < 10) {
             alert((0, translation_1.GetTranslation)(translation_1.TranslationIdentity.MessageError));
             return false;
         }

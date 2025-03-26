@@ -26,6 +26,13 @@ var ImageIdentity;
     ImageIdentity[ImageIdentity["Location"] = 20] = "Location";
     ImageIdentity[ImageIdentity["Mail"] = 21] = "Mail";
     ImageIdentity[ImageIdentity["LinkedIn"] = 22] = "LinkedIn";
+    ImageIdentity[ImageIdentity["Sorting"] = 23] = "Sorting";
+    ImageIdentity[ImageIdentity["Timetable"] = 24] = "Timetable";
+    ImageIdentity[ImageIdentity["VoyageNest"] = 25] = "VoyageNest";
+    ImageIdentity[ImageIdentity["TEDx"] = 26] = "TEDx";
+    ImageIdentity[ImageIdentity["Senapp"] = 27] = "Senapp";
+    ImageIdentity[ImageIdentity["ThisWebsite"] = 28] = "ThisWebsite";
+    ImageIdentity[ImageIdentity["APUPhotoshoot"] = 29] = "APUPhotoshoot";
 })(ImageIdentity = exports.ImageIdentity || (exports.ImageIdentity = {}));
 exports.ImageStore = new Map([
     [ImageIdentity.Instagram, { url: 'fab fa-instagram', fontawesome: true }],
@@ -50,5 +57,12 @@ exports.ImageStore = new Map([
     [ImageIdentity.Date, { url: 'fas fa-calendar-alt', fontawesome: true }],
     [ImageIdentity.Location, { url: 'fas fa-map-pin', fontawesome: true }],
     [ImageIdentity.Mail, { url: 'fas fa-envelope', fontawesome: true }],
+    [ImageIdentity.Sorting, { url: '../resources/projects/gameEngine.png' }],
+    [ImageIdentity.Timetable, { url: '../resources/projects/gameEngine.png' }],
+    [ImageIdentity.VoyageNest, { url: '../resources/projects/gameEngine.png' }],
+    [ImageIdentity.TEDx, { url: '../resources/projects/gameEngine.png' }],
+    [ImageIdentity.Senapp, { url: '../resources/projects/gameEngine.png' }],
+    [ImageIdentity.Sorting, { url: '../resources/projects/gameEngine.png' }],
+    [ImageIdentity.APUPhotoshoot, { url: '../resources/projects/gameEngine.png' }],
 ]);
 //# sourceMappingURL=images.js.map

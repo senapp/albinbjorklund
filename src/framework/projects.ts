@@ -11,7 +11,16 @@ export enum ProjectIdentity {
     Skeadeals,
     BBGranden,
     Kanji,
-    JapanWorldMarker
+    JapanWorldMarker,
+
+    Sorting,
+    Timetable,
+    VoyageNest,
+    TEDx,
+    Senapp,
+    ThisWebsite,
+
+    APUPhotoshoot
 }
 
 export type Link = {
@@ -127,8 +136,10 @@ const ChessProject: ProjectInformation = {
         { name: 'GitHub', url: 'https://github.com/senapp/ChessPython' },
     ],
     tools: ['Python', 'PyGame'],
-    descriptionEN: `Chess made in Python.`,
-    descriptionJP: `Python で作られたチェスです。`,
+    descriptionEN: `Simple chess made with Python and PyGame.
+It can be used to play locally against another player or a random AI. `,
+    descriptionJP: `Python と PyGame で作られたシンプルなチェスです。
+他のプレイヤーやランダム AI とローカルで対戦できます。`,
     public: false,
     url: toUrl(`/projects/chess`),
     photos: [],
@@ -231,23 +242,27 @@ GraphicSettings、設定の拡張
 const PathfindingProject: ProjectInformation = {
     type: ProjectIdentity.Pathfinding,
     icon: ImageIdentity.Pathfinding,
-    nameEN: 'Pathfinding Algorithms',
-    nameJP: '経路探索アルゴリズム',
+    nameEN: 'Visual Pathfinding Algorithms',
+    nameJP: '視覚的経路探索アルゴリズム',
     links: [
         { name: 'Website', url: 'https://senapp.github.io/VisualPathfindingAlgorithms/dist/index.html' },
         { name: 'GitHub', url: 'https://github.com/senapp/VisualPathfindingAlgorithms' },
     ],
     tools: ['Typescript', 'React', 'Javascript'],
-    descriptionEN: `Visualizer for pathfinding algorithms such as A*
+    descriptionEN: `Visualizer for pathfinding algorithms such as A*, Dijkstra and Breadth-First Search.
 
-Started as a pure Javascript project but was later converted to Typescript and React`,
-    descriptionJP: `A* などの経路探索アルゴリズムのビジュアライザー
+Supports different rendering styles and different options for A*'s heuristic algorithm.
 
-純粋な Javascript プロジェクトとして開始されましたが、後に Typescript と React に変換されました`,
+Started as a pure JavaScript project but was later converted to TypeScript and React.`,
+    descriptionJP: `A*、ダイクストラ、幅優先探索などのパスファインディング アルゴリズムのビジュアライザーです。
+
+A* のヒューリスティック アルゴリズムのさまざまなレンダリング スタイルとさまざまなオプションをサポートします。
+
+純粋な JavaScript プロジェクトとして開始されましたが、後に TypeScript と React に変換されました。`,
     public: false,
     url: toUrl(`/projects/pathfinding`),
     photos: [],
-    tags: ['Application', 'Coding Adventure', 'Typescript', 'React']
+    tags: ['Application', 'Coding Adventure', 'Algorithm' , 'Typescript', 'React']
 };
 
 const SkeadealsProject: ProjectInformation = {
@@ -283,9 +298,11 @@ const BBGrandenProject: ProjectInformation = {
     links: [
         { name: 'Website', url: 'https://www.bbgranden.se/pages/home' },
     ],
-    tools: ['HTML', 'CSS', 'Javascript'],
-    descriptionEN: `Booking site for B&B Gränden, a hotel in Skellefteå, Sweden.`,
-    descriptionJP: `スウェーデン、シェレフテオのホテル、B&B Gränden の予約サイトです。`,
+    tools: ['HTML', 'CSS', 'Javascript', 'Sirvoy'],
+    descriptionEN: `Booking site for B&B Gränden, a hotel in Skellefteå, Sweden.
+Project completed on a freelance basis.`,
+    descriptionJP: `スウェーデン、シェレフテオのホテル、B&B Gränden の予約サイトです。
+フリーランスとして完了したプロジェクトです。`,
     public: false,
     url: toUrl(`/projects/bbgranden`),
     photos: [],
@@ -302,8 +319,10 @@ const KanjiAppProject: ProjectInformation = {
         { name: 'GitHub', url: 'https://github.com/senapp/KanjiApp' },
     ],
     tools: ['Typescript', 'React'],
-    descriptionEN: `Kanji practicing application for learning Japanese.`,
-    descriptionJP: `日本語学習のための漢字練習アプリケーションです。`,
+    descriptionEN: `Kanji practice application for learning Japanese.
+It includes all the kanji for JLPT N5 to N1 and a dictionary for words that are used for each kanji. The application also supports "archiving" to practice new/memorized kanji.`,
+    descriptionJP: `日本語学習のための漢字練習アプリケーションです。
+JLPT N5～N1の全漢字と、各漢字に使われる単語の辞書を収録。また、新しい漢字や覚えた漢字を練習するための「アーカイブ」機能も搭載です。`,
     public: false,
     url: toUrl(`/projects/kanji`),
     photos: [],
@@ -319,23 +338,193 @@ const JapanWorldMarkerProject: ProjectInformation = {
         { name: 'Website', url: 'https://senapp.github.io/JapanAndWorldMarker/dist/index.html' },
         { name: 'GitHub', url: 'https://github.com/senapp/JapanAndWorldMarker' },
     ],
-    tools: ['Typescript', 'React', 'OpenStreetMap'],
-    descriptionEN: `Marker application for recording which locations around Japan and in the world you have been to or wish to go to.`,
-    descriptionJP: `日本全国や世界のどこへ行ったか、行きたいかを記録するマーカーアプリケーションです。`,
+    tools: ['Typescript', 'React', 'OpenStreetMap', 'GEOJson'],
+    descriptionEN: `Marker application for recording destinations one wants to visit or already has visited before in the world or for the prefectures of Japan.
+    The application supports exporting and uploading this marker data which is stored locally on the browser otherwise.`,
+    descriptionJP: `世界中の行きたい場所や、すでに訪れたことのある場所、または日本の都道府県を記録するマーカー アプリケーションです。
+このアプリケーションは、ブラウザーにローカルに保存されているマーカー データのエクスポートとアップロードをサポートしています。`,
     public: false,
     url: toUrl(`/projects/japanworldmarker`),
     photos: [],
     tags: ['Application', 'Coding Adventure', 'Typescript', 'React', 'OpenStreetMap']
 };
 
+const SortingProject: ProjectInformation = {
+    type: ProjectIdentity.Sorting,
+    icon: ImageIdentity.Sorting,
+    nameEN: 'Visual Sorting Algorithms',
+    nameJP: '視覚的ソートアルゴリズム',
+    links: [
+        { name: 'Website', url: 'https://senapp.github.io/VisualSortingAlgorithms/dist/index.html' },
+        { name: 'GitHub', url: 'https://github.com/senapp/VisualSortingAlgorithms' },
+    ],
+    tools: ['Typescript', 'React'],
+    descriptionEN: `Visualizer for sorting algorithms such as Quick Sort, Bubble Sort, and Insertion Sort.
+
+This visualizer not only visualizes how the algorithm sorts the array with a graph, but also shows which element of the array is being checked and how that element is treated in the algorithm.`,
+    descriptionJP: `クイック ソート、バブル ソート、挿入ソートなどのソート アルゴリズムのビジュアライザー。
+
+このビジュアライザーは、アルゴリズムが配列をソートする方法をグラフで視覚化するだけでなく、配列のどの要素がチェックされているか、その要素がアルゴリズムでどのように扱われるかを示します。`,
+    public: false,
+    url: toUrl(`/projects/sorting`),
+    photos: [],
+    tags: ['Application', 'Coding Adventure', 'Algorithm' , 'Typescript', 'React']
+};
+
+const TimetableProject: ProjectInformation = {
+    type: ProjectIdentity.Timetable,
+    icon: ImageIdentity.Timetable,
+    nameEN: 'APU Timetable Maker',
+    nameJP: 'APU時間割作成ツール',
+    links: [
+        { name: 'Website', url: 'https://senapp.github.io/APU-Timetable/dist/index.html' },
+        { name: 'GitHub', url: 'https://github.com/senapp/APU-Timetable' },
+    ],
+    tools: ['Typescript', 'React', 'PDF Reader', 'Google API'],
+    descriptionEN: `This is an application that takes the PDF which Ritsumeikan APU provides to students upon finalizing course registration and turns it into a customizable and exportable timetable which includes additional course information.
+
+Upon loading the courses into this application, each course's location, such as the classroom, is searched for and added automatically to the timetable. This application also allows students to add or remove courses, such as courses where they have a Teaching Assistant role or courses which they plan to drop.`,
+    descriptionJP: `これは、立命館APUが履修登録を完了した際に学生に提供するPDFを、追加のコース情報を含むカスタマイズおよびエクスポート可能な時間割に変換するアプリケーションです。
+
+このアプリケーションにコースを読み込むと、教室などの各コースの場所が検索され、時間割に自動的に追加されます。このアプリケーションでは、ティーチングアシスタントの役割を持つコースや、ドロップする予定のコースなど、学生がコースを追加または削除することもできます。`,
+    public: false,
+    url: toUrl(`/projects/timetable`),
+    photos: [],
+    tags: ['Application', 'Coding Adventure', 'University' , 'Typescript', 'React']
+};
+
+const VoyageNestProject: ProjectInformation = {
+    type: ProjectIdentity.VoyageNest,
+    icon: ImageIdentity.VoyageNest,
+    nameEN: 'VoyageNest',
+    nameJP: 'VoyageNest',
+    links: [
+        { name: 'Presentation', url: 'https://www.canva.com/design/DAF3fV5gsMI/bOFy_4E9ZfHAq6ZryjQR-w/view?utm_content=DAF3fV5gsMI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7e6c469848'},
+        { name: 'Demo', url: 'https://www.youtube.com/shorts/Mx9Ie5B70fs'},
+    ],
+    tools: ['Typescript', 'React'],
+    descriptionEN: `VoyageNest was made as an application startup proposal for the Hult Prize at Ritsumeikan APU.
+
+I was a part of a 5-person team that brainstormed, designed and delivered the pitch for the project. One of my main objectives was to make a demo for this application (which can be seen above). This demo was used during our pitch to showcase what we believed the app could be.
+
+The idea behind VoyageNest is that, especially in Japan, there is an issue of overtourism. As most governments want more tourists to come, however, as can be seen in Japan, this results in most people gathering in just the major cities and major tourist spots.
+
+So VoyageNest would be the solution for that! It would take in the users' preferences for travel destinations and guide the users to lesser-known locations within their desired locations. According to a study by booking.com the majority of travellers want to avoid popular tourist spots and 30% are willing to change their destination completely because of this.
+
+VoyageNest would find them hidden gems, connect them with locals, other travellers and allows its users to truly experience the culture of a destination and have a more fulling journey.`,
+    descriptionJP: `VoyageNest は、立命館 APU の Hult Prize 向けのアプリケーション スタートアップ提案として作成されました。
+
+私は 5 人のチームの一員として、このプロジェクトのブレインストーミング、設計、プレゼンテーションを行いました。私の主な目的の 1 つは、このアプリケーションのデモを作成することでした (上記を参照)。このデモは、このアプリケーションがどのようなものになるかを示すために、プレゼンテーション中に使用されました。
+
+VoyageNest の背後にあるアイデアは、特に日本では、観光過多の問題があるということです。ほとんどの政府はより多くの観光客が来ることを望んでいますが、日本に見られるように、ほとんどの人が主要都市と主要な観光スポットに集まる結果になっています。
+
+そこで、VoyageNest がその解決策になります。旅行先に関するユーザーの好みを取り入れ、ユーザーが希望する場所内のあまり知られていない場所にユーザーを誘導します。booking.com の調査によると、旅行者の大多数は人気の観光スポットを避けたいと考えており、30% はそのために目的地を完全に変更する用意があります。
+
+VoyageNest は、隠れた名所を見つけ、地元の人々や他の旅行者と結び付け、ユーザーが目的地の文化を真に体験し、より充実した旅をできるようにします。`,
+    public: false,
+    url: toUrl(`/projects/voyagenest`),
+    photos: [],
+    tags: ['University', 'Typescript', 'React', 'Business']
+};
+
+const TEDxProject: ProjectInformation = {
+    type: ProjectIdentity.TEDx,
+    icon: ImageIdentity.TEDx,
+    nameEN: 'TEDxAPU',
+    nameJP: 'TEDxAPU',
+    links: [
+        { name: "Website", url: "https://tedxritsumeikanapu.com/"},
+        { name: "Instagram", url: "https://www.instagram.com/tedxritsumeikanapu/"}
+    ],
+    tools: ['Wix.com'],
+    descriptionEN: `TEDx APU is a student-organized TEDx event at Ritsumeikan Asia Pacific University.
+
+Currently, for TEDxAPU 2025, I am the Head of Web Design, leading a team of 8 students working to deliver a valuable and high-quality experience to users searching for TEDxAPU.
+
+I also joined the TEDxAPU 2024 event as a web designer to restart the event and website, which last took place at APU in 2019.
+
+TEDxAPU 2025 has the theme of "Odyssey", where speakers will be sharing their unique journeys with the world. The speakers for TEDxAPU 2025 include Kantaro, an influencer sharing his journey walking across Japan with his Chiba-inu, with his 2 million followers across social media. Yamashita, the chairman of the social welfare cooperation Taiyo no Ie and the author of the book "So What If I'm Quadriplegic?". Yoneyama, president of Ritsumeikan APU and vice chancellor of Ritsumeikan Trust, leads a university with over 6000 students from over 110 countries. In addition to these speakers, winners of the Student Speaker League will also take the stage, Sunny, Yuhi and Cattleya.`,
+    descriptionJP: `TEDx APUは、立命館アジア太平洋大学の学生が主催するTEDxイベントです。
+
+現在、私はTEDxAPU 2025のWebデザイン責任者として、TEDxAPUを検索するユーザーに価値ある高品質の体験を提供するために取り組んでいる8人の学生チームを率いています。
+
+また、2019年にAPUで最後に開催されたイベントとWebサイトを再開するために、TEDxAPU 2024イベントにWebデザイナーとして参加しました。
+
+TEDxAPU 2025のテーマは「オデッセイ」で、スピーカーは独自の旅を世界と共有します。TEDxAPU 2025のスピーカーには、ソーシャルメディアで200万人のフォロワーを持ち、千葉犬と一緒に日本中を歩いて旅するインフルエンサーのカンタロー氏や、社会福祉法人太陽の家理事長で「四肢麻痺でもどうにかなる？」の著者でもある山下氏などがいます。立命館APU学長であり、学校法人立命館副総長でもある米山氏は、110カ国以上から6,000人以上の学生が集まる大学を率いています。これらのスピーカーに加え、学生スピーカーリーグの優勝者であるサニー、ユウヒ、カトレアも登壇します。`,
+    public: false,
+    url: toUrl(`/projects/tedx`),
+    photos: [],
+    tags: ['University', 'Website', 'Wix']
+};
+
+const SenappProject: ProjectInformation = {
+    type: ProjectIdentity.Senapp,
+    icon: ImageIdentity.Senapp,
+    nameEN: 'Senapp Studios',
+    nameJP: 'Senapp Studios',
+    links: [
+        { name: "Website", url: "https://senapp.github.io/"},
+    ],
+    tools: ['Javascript', 'HTML CSS'],
+    descriptionEN: ``,
+    descriptionJP: ``,
+    public: false,
+    url: toUrl(`/projects/senapp`),
+    photos: [],
+    tags: []
+};
+
+const ThisWebsiteProject: ProjectInformation = {
+    type: ProjectIdentity.ThisWebsite,
+    icon: ImageIdentity.ThisWebsite,
+    nameEN: 'This website',
+    nameJP: 'このウェブサイト',
+    links: [
+        { name: "Website", url: "https://albinbjoerklund.com"},
+    ],
+    tools: ['Typescript', 'React', 'Google Analytics'],
+    descriptionEN: ``,
+    descriptionJP: ``,
+    public: false,
+    url: toUrl(`/projects/thiswebsite`),
+    photos: [],
+    tags: []
+};
+
+const APUPhotoshootProject: ProjectInformation = {
+    type: ProjectIdentity.APUPhotoshoot,
+    icon: ImageIdentity.APUPhotoshoot,
+    nameEN: 'APU Modelling',
+    nameJP: 'APUモデリング',
+    links: [],
+    tools: [],
+    descriptionEN: ``,
+    descriptionJP: ``,
+    public: false,
+    url: toUrl(`/projects/apuphotoshoot`),
+    photos: [],
+    tags: ['Model']
+};
+
 export const ProjectStore = new Map<ProjectIdentity, ProjectInformation>([
     [ProjectIdentity.IFS, IFSProject],
     [ProjectIdentity.EFS, EFSProject],
-    [ProjectIdentity.Chess, ChessProject],
-    [ProjectIdentity.GameEngine, GameEngineProject],
-    [ProjectIdentity.Pathfinding, PathfindingProject],
+
     [ProjectIdentity.Skeadeals, SkeadealsProject],
+    [ProjectIdentity.VoyageNest, VoyageNestProject],
+
+    [ProjectIdentity.TEDx, TEDxProject],
     [ProjectIdentity.BBGranden, BBGrandenProject],
-    [ProjectIdentity.Kanji, KanjiAppProject],
+    [ProjectIdentity.Senapp, SenappProject],
+    [ProjectIdentity.ThisWebsite, ThisWebsiteProject],
+
+    [ProjectIdentity.Pathfinding, PathfindingProject],
+    [ProjectIdentity.Sorting, SortingProject],
     [ProjectIdentity.JapanWorldMarker, JapanWorldMarkerProject],
+    [ProjectIdentity.Kanji, KanjiAppProject],
+    [ProjectIdentity.GameEngine, GameEngineProject],
+    [ProjectIdentity.Chess, ChessProject],
+    [ProjectIdentity.Timetable, TimetableProject],
+
+    [ProjectIdentity.APUPhotoshoot, APUPhotoshootProject],
 ]);
