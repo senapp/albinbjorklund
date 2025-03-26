@@ -6,9 +6,10 @@ const connection_1 = require("../../utils/connection");
 const css_1 = require("../../utils/css");
 const Image_1 = require("../common/Image");
 const BarItem_module_css_1 = require("./BarItem.module.css");
+const translation_1 = require("../../framework/translation");
 const BarItem = ({ label = '', imageIdentity, url, action, containerClassName = '', className = '', newPage = false }) => {
     let isActive = (0, connection_1.isCurrentUrl)(url);
-    if (document.location.href.toLowerCase().includes('project') && label.toLowerCase().includes('project')) {
+    if (document.location.href.toLowerCase().includes('project') && label.toLowerCase().includes((0, translation_1.GetTranslation)(translation_1.TranslationIdentity.Projects).toLowerCase())) {
         isActive = true;
     }
     const itemClasses = (0, css_1.filterCssClasses)({
@@ -21,7 +22,7 @@ const BarItem = ({ label = '', imageIdentity, url, action, containerClassName = 
         [className]: !!className
     });
     return (React.createElement("li", { className: itemClasses },
-        React.createElement("a", { className: aClasses, onClick: action, href: "//" + url, target: newPage ? '_blank' : undefined, rel: "noreferrer" },
+        React.createElement("a", { className: aClasses, onClick: action, href: url, target: newPage ? '_blank' : undefined, rel: "noreferrer" },
             label && label,
             imageIdentity && React.createElement(Image_1.Image, { imageIdentity: imageIdentity }))));
 };

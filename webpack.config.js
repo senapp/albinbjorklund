@@ -19,6 +19,13 @@ const pages = [
     { url: 'projects/pathfinding' },
     { url: 'projects/senappGameEngine' },
     { url: 'projects/skeadeals' },
+    { url: 'projects/sorting' },
+    { url: 'projects/timetable' },
+    { url: 'projects/voyagenest' },
+    { url: 'projects/tedx' },
+    { url: 'projects/senapp' },
+    { url: 'projects/thiswebsite' },
+    { url: 'projects/apuphotoshoot' },
 ];
 
 const commonConfig = (env) => ({

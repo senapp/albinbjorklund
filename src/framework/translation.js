@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetTranslation = exports.TranslationStore = exports.TranslationIdentity = exports.switchLanguage = exports.getLanguage = exports.setLangauge = exports.Language = void 0;
+exports.GetTranslation = exports.LinkTranslation = exports.TranslationStore = exports.TranslationIdentity = exports.switchLanguage = exports.getLanguage = exports.setLangauge = exports.Language = void 0;
 var Language;
 (function (Language) {
     Language[Language["English"] = 0] = "English";
@@ -33,7 +33,7 @@ var TranslationIdentity;
     TranslationIdentity[TranslationIdentity["Projects"] = 2] = "Projects";
     TranslationIdentity[TranslationIdentity["Resume"] = 3] = "Resume";
     TranslationIdentity[TranslationIdentity["Contact"] = 4] = "Contact";
-    TranslationIdentity[TranslationIdentity["Name"] = 5] = "Name";
+    TranslationIdentity[TranslationIdentity["Albin"] = 5] = "Albin";
     TranslationIdentity[TranslationIdentity["Introduction1"] = 6] = "Introduction1";
     TranslationIdentity[TranslationIdentity["Introduction2"] = 7] = "Introduction2";
     TranslationIdentity[TranslationIdentity["Introduction3"] = 8] = "Introduction3";
@@ -61,6 +61,14 @@ var TranslationIdentity;
     TranslationIdentity[TranslationIdentity["Websites"] = 30] = "Websites";
     TranslationIdentity[TranslationIdentity["Business"] = 31] = "Business";
     TranslationIdentity[TranslationIdentity["Applications"] = 32] = "Applications";
+    TranslationIdentity[TranslationIdentity["Name"] = 33] = "Name";
+    TranslationIdentity[TranslationIdentity["Links"] = 34] = "Links";
+    TranslationIdentity[TranslationIdentity["Tools"] = 35] = "Tools";
+    TranslationIdentity[TranslationIdentity["Description"] = 36] = "Description";
+    TranslationIdentity[TranslationIdentity["Gallery"] = 37] = "Gallery";
+    TranslationIdentity[TranslationIdentity["GalleryPhotosText"] = 38] = "GalleryPhotosText";
+    TranslationIdentity[TranslationIdentity["Website"] = 39] = "Website";
+    TranslationIdentity[TranslationIdentity["Award"] = 40] = "Award";
 })(TranslationIdentity = exports.TranslationIdentity || (exports.TranslationIdentity = {}));
 exports.TranslationStore = new Map([
     [TranslationIdentity.Home, { english: 'Home', japanese: 'ホーム' }],
@@ -68,7 +76,7 @@ exports.TranslationStore = new Map([
     [TranslationIdentity.Projects, { english: 'Projects', japanese: 'プロジェクト' }],
     [TranslationIdentity.Resume, { english: 'Resume', japanese: '履歴書' }],
     [TranslationIdentity.Contact, { english: 'Contact', japanese: '連絡先' }],
-    [TranslationIdentity.Name, { english: 'Albin', japanese: 'アルビン' }],
+    [TranslationIdentity.Albin, { english: 'Albin', japanese: 'アルビン' }],
     [TranslationIdentity.Introduction1, { english: 'Hello, I\'m', japanese: 'こんにちは、スウェーデン出身の' }],
     [TranslationIdentity.Introduction2, { english: 'from Sweden,', japanese: 'です。' }],
     [TranslationIdentity.Introduction3, { english: 'a Software Designer and Game Developer (and sometimes a model).', japanese: 'ソフトウェアデザイナー兼ゲーム開発者です（モデルも時々やります）。' }],
@@ -96,7 +104,32 @@ exports.TranslationStore = new Map([
     [TranslationIdentity.Websites, { english: 'Websites', japanese: 'ウェブサイト' }],
     [TranslationIdentity.Business, { english: 'Business', japanese: 'ビジネス' }],
     [TranslationIdentity.Applications, { english: 'Applications', japanese: 'アプリケーション' }],
+    [TranslationIdentity.Name, { english: 'Name', japanese: '名前' }],
+    [TranslationIdentity.Links, { english: 'Links', japanese: 'リンク' }],
+    [TranslationIdentity.Tools, { english: 'Tools', japanese: 'ツール' }],
+    [TranslationIdentity.Description, { english: 'Description', japanese: '説明' }],
+    [TranslationIdentity.Gallery, { english: 'Gallery', japanese: 'ギャラリー' }],
+    [TranslationIdentity.GalleryPhotosText, { english: '`Showing {0} of {1} photos`', japanese: '{1}枚中{0}枚を表示中' }],
+    [TranslationIdentity.Website, { english: 'Website', japanese: 'ウェブサイト' }],
+    [TranslationIdentity.Award, { english: 'Award', japanese: 'アワード' }],
 ]);
+const LinkTranslation = (link) => {
+    var _a;
+    let identitiesToCheck = [
+        TranslationIdentity.Website,
+        TranslationIdentity.Award
+    ];
+    let linkLower = link.toLowerCase().trim();
+    for (let index = 0; index < identitiesToCheck.length; index++) {
+        const identity = identitiesToCheck[index];
+        let identityLower = (_a = exports.TranslationStore.get(identity)) === null || _a === void 0 ? void 0 : _a.english.toLowerCase().trim();
+        if (linkLower == identityLower) {
+            return (0, exports.GetTranslation)(identity);
+        }
+    }
+    return link;
+};
+exports.LinkTranslation = LinkTranslation;
 const GetTranslation = (identity) => {
     const language = (0, exports.getLanguage)();
     const translation = exports.TranslationStore.get(identity);

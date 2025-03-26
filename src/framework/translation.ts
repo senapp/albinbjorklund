@@ -112,7 +112,7 @@ export const TranslationStore = new Map<TranslationIdentity, TranslationInformat
     [TranslationIdentity.Tools, { english: 'Tools', japanese: 'ツール' }],
     [TranslationIdentity.Description, { english: 'Description', japanese: '説明' }],
     [TranslationIdentity.Gallery, { english: 'Gallery', japanese: 'ギャラリー' }],
-    [TranslationIdentity.GalleryPhotosText, { english: '`Showing {0} of {1} photos`', japanese: '{1}枚中{0}枚を表示中' }],
+    [TranslationIdentity.GalleryPhotosText, { english: 'Showing {0} of {1} photos', japanese: '{1}枚中{0}枚を表示中' }],
 
     [TranslationIdentity.Website, { english: 'Website', japanese: 'ウェブサイト' }],
     [TranslationIdentity.Award, { english: 'Award', japanese: 'アワード' }],
