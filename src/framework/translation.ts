@@ -82,7 +82,7 @@ export const TranslationStore = new Map<TranslationIdentity, TranslationInformat
     [TranslationIdentity.Introduction1, { english: 'Hello, I\'m', japanese: 'こんにちは、スウェーデン出身の' }],
     [TranslationIdentity.Introduction2, { english: 'from Sweden,', japanese: 'です。' }],
     [TranslationIdentity.Introduction3, { english: 'a Software Designer and Game Developer (and sometimes a model).', japanese: 'ソフトウェアデザイナー兼ゲーム開発者です（モデルも時々やります）。' }],
-    [TranslationIdentity.Introduction4, { english: 'Profient in C#, Unity, Typescript and React.', japanese: 'C#、Unity、Typescript、Reactに精通しています。' }],
+    [TranslationIdentity.Introduction4, { english: 'Proficient in C#, Unity, Typescript and React.', japanese: 'C#、Unity、Typescript、React に精通しています。' }],
     [TranslationIdentity.Introduction5, { english: 'Check out my various', japanese: '私のさまざまな' }],
     [TranslationIdentity.Introduction6, { english: '.', japanese: 'をご覧ください。' }],
     [TranslationIdentity.EmailExplain, { english: 'This is my "public" email, you might have already contacted me with my "private" email.', japanese: 'これは私の「公開」メールです。すでに私の「非公開」メールで私に連絡しているかもしれません。' }],
