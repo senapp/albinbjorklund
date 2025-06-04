@@ -93,7 +93,7 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div className={css.snsRow}>
                     <Image target='_blank' href='https://www.instagram.com/albin_bjorklund/' containerClassName={css.icon} imageClassName={css.iconImage} imageIdentity={ImageIdentity.Instagram} />
-                    <Image target='_blank' href='https://www.linkedin.com/in/albin-b-4623411b6/' containerClassName={css.icon} imageClassName={css.iconImage} imageIdentity={ImageIdentity.LinkedIn} />
+                    <Image target='_blank' href='https://www.linkedin.com/in/albinbjorklund/' containerClassName={css.icon} imageClassName={css.iconImage} imageIdentity={ImageIdentity.LinkedIn} />
                 </div>
             </div>
             <div className={css.mailContainer}>
